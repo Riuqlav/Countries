@@ -1,11 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-//fetch all data from the API "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json"
-
 const Api = () => {
   const [pllNumber, setPllNumber] = useState([]);
 
+  //useEffect to fetch data and make sure it only runs once with [] empty array
   useEffect(() => {
     fetch(
       "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json"
@@ -28,7 +27,6 @@ const Api = () => {
   //slice the 10 lowest population countries
 
   const low10 = [...sortByPopulation].slice(-11);
-
-  console.log(top10, low10);
 };
+
 export default Api;

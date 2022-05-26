@@ -6,12 +6,18 @@ import Api from "./utils/Api";
 
 function App() {
   return (
-    <div className="App">
-      <Api />
-      <CardsHeader />
-      <Cards />
-    </div>
+    <>
+      <globalContext.Provider value={Api}>
+        <div className="App">
+          <Api />
+          <CardsHeader />
+          <Cards />
+        </div>
+      </globalContext.Provider>
+    </>
   );
 }
+
+export const globalContext = React.createContext();
 
 export default App;
