@@ -16,11 +16,19 @@ const Api = () => {
       });
   }, []);
 
+  //sorts all data by population
   const sortByPopulation = [...pllNumber].sort(
     (a, b) => a.population - b.population
   );
+
+  //slice the 10 highest population countries
+
+  const top10 = [...sortByPopulation].slice(0, 11);
+
+  //slice the 10 lowest population countries
+
+  const low10 = [...sortByPopulation].slice(-11);
+
+  console.log(top10, low10);
 };
-
 export default Api;
-
-///I did not find out how to  sort the data by population in the API.
