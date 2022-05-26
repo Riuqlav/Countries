@@ -1,26 +1,18 @@
 import React from "react";
+//fetch all data from the API "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json"
+
 const Api = () => {
-  //fetch population number from the link "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json" and return an array with 10 countries with the highest population number.
+  fetch(
+    "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json"
+  )
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
 
-  const fetchHighPopulation = async () => {
-    const responseTop10 = await fetch(
-      "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json"
-    );
-    const data = await responseTop10.json();
-    const population = data.slice(0, 10);
-    return population;
-  };
-
-  //fetch population number from the link "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json" and return an array with 10 countries with the lowest population number.
-
-  const fetchLowPopulation = async () => {
-    const responseBottom10 = await fetch(
-      "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json"
-    );
-    const data = await responseBottom10.json();
-    const population = data.slice(-10);
-    return population;
-  };
+  //sortByPopulation Array.sort() method sorts by population number.
 };
 
 export default Api;
+
+// const sortByPopulation = [...Api].sort((a, b) => a.population - b.population);
+// console.log(sortByPopulation);
