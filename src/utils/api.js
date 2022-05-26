@@ -1,18 +1,26 @@
 import React from "react";
+import { useState } from "react";
+
 //fetch all data from the API "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json"
 
 const Api = () => {
+  const [pllNumber, setPllNumber] = useState([]);
+
   fetch(
     "https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-population.json"
   )
     .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.log(error));
+    .then((json) => {
+      console.log(json);
+      pllNumber(json);
+    });
 
-  //sortByPopulation Array.sort() method sorts by population number.
+  const sortByPopulation = [...setPllNumber].sort(
+    (a, b) => a.population - b.population
+  );
+  console.log(sortByPopulation);
 };
 
 export default Api;
 
-// const sortByPopulation = [...Api].sort((a, b) => a.population - b.population);
-// console.log(sortByPopulation);
+///I did not find out how to  sort the data by population in the API.
