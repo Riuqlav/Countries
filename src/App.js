@@ -9,7 +9,6 @@ function App() {
     <>
       <globalContext.Provider value={Api}>
         <div className="App">
-          <Api />
           <CardsHeader />
           <Cards />
         </div>
