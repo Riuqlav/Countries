@@ -1,5 +1,7 @@
+import { useState, useEffect, useContext } from "react";
 import React from "react";
-import { useState, useEffect } from "react";
+
+// const GlobalContext = React.createContext();
 
 const Api = () => {
   const [pllNumber, setPllNumber] = useState([]);
@@ -21,12 +23,13 @@ const Api = () => {
   );
 
   //slice the 10 highest population countries
-
-  const top10 = [...sortByPopulation].slice(0, 11);
-
+  const top10 = [...sortByPopulation].slice(-11);
   //slice the 10 lowest population countries
+  const low10 = [...sortByPopulation].slice(0, 11);
 
-  const low10 = [...sortByPopulation].slice(-11);
+  console.table(top10);
+  console.table(low10);
 };
 
+// return <GlobalContext value={Api}></GlobalContext>
 export default Api;
