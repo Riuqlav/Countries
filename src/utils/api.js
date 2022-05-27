@@ -23,9 +23,11 @@ const Api = () => {
   );
 
   //slice the 10 highest population countries
-  const top10 = [...sortByPopulation].slice(-11);
-  //slice the 10 lowest population countries
-  const low10 = [...sortByPopulation].slice(0, 11);
+  const top10 = [...sortByPopulation].slice(-10);
+
+  //slice the 10 lowest population countries greater than 0 in population (I had to hard code it, I'll try to make it dynamic later on )
+
+  const low10 = [...sortByPopulation].slice(4, 14);
 
   console.table(top10);
   console.table(low10);
