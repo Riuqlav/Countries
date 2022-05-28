@@ -1,20 +1,23 @@
 import React from "react";
+import { useContext } from "react";
+import App, { GlobalContext } from "../../App";
 
-const CardsHeader = (props) => {
+const CardsHeader = () => {
+  const Api = useContext(GlobalContext);
+  //test works bringing all countries that don't have 0 population globally
+  console.table(Api);
+
   return (
     <>
       <header>
-        <h1></h1>
+        <h1> </h1>
         <div className="collapse bg-dark" id="navbarHeader">
           <div className="container">
             <div className="row">
               <div className="col-sm-8 col-md-7 py-4">
                 <h4 className="text-white">About</h4>
                 <p className="text-muted">
-                  Add some information about the album below, the author, or any
-                  other background context. Make it a few sentences long so
-                  folks can pick up some informative tidbits. Then, link them
-                  off to some social networking sites or contact information.
+                  kfjazlkfnalkzejfnlkazjenflkanzefklnazelkfnalzkejnfaklzejnflkazneflkazneflkajzneflkaznefklaznefklazneflkazjenf
                 </p>
               </div>
               <div className="col-sm-4 offset-md-1 py-4">

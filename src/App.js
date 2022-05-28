@@ -2,21 +2,18 @@ import "./App.css";
 import Cards from "./components/Cards/Cards";
 import CardsHeader from "./components/Cards/CardsHeader";
 import Api from "./utils/Api";
-//import { GlobalContext } from "./utils/Api";
+import React from "react";
+
+export const GlobalContext = React.createContext();
 
 function App() {
   return (
-    <>
-      {/* globalContext sandwich the app to pass down state of Api to all components  */}
-      {/* <GlobalContext.Provider value={Api}> */}
-      <Api />
+    <GlobalContext.Provider value={Api()}>
       <div className="App">
         <CardsHeader />
         <Cards />
       </div>
-      {/* </GlobalContext.Provider> */}
-    </>
+    </GlobalContext.Provider>
   );
 }
-
 export default App;
