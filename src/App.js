@@ -1,17 +1,19 @@
 import "./App.css";
-import Cards from "./components/Cards/Cards";
-import CardsHeader from "./components/Cards/CardsHeader";
 import Api from "./utils/Api";
 import React from "react";
+import Header from "./components/Cards/Header";
+// import CardsAll from "./components/Cards/CardsAll";
+import Footer from "./components/Cards/Footer";
 
 export const GlobalContext = React.createContext();
 
 function App() {
   return (
-    <GlobalContext.Provider value={Api()}>
+    <GlobalContext.Provider value={Api}>
       <div className="App">
-        <CardsHeader />
-        <Cards />
+        <Header />
+        {/* <CardsAll /> */}
+        <Footer />
       </div>
     </GlobalContext.Provider>
   );

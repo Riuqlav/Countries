@@ -1,17 +1,14 @@
-import React from "react";
-import { useContext } from "react";
-import App, { GlobalContext } from "../../App";
+import React, { useState } from "react";
+import CardsAll from "./CardsAll";
+import CardsTop from "./CardsTop";
+import CardsLow from "./CardsLow";
 
-const CardsHeader = () => {
-  const Api = useContext(GlobalContext);
-  //test works bringing all countries that don't have 0 population globally
-  console.table(Api);
-
+const Header = () => {
+  const [active, setActive] = useState("");
   return (
     <>
       <header>
-        <h1> </h1>
-        <div className="collapse bg-dark" id="navbarHeader">
+        <div className="collapse bg-dark " id="navbarHeader">
           <div className="container">
             <div className="row">
               <div className="col-sm-8 col-md-7 py-4">
@@ -46,7 +43,7 @@ const CardsHeader = () => {
         <div className="navbar navbar-dark bg-dark shadow-sm">
           <div className="container d-flex justify-content-between">
             <a href="#" className="navbar-brand d-flex align-items-center">
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -62,8 +59,16 @@ const CardsHeader = () => {
               >
                 <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
                 <circle cx="12" cy="13" r="4" />
-              </svg>
-              <strong>Album</strong>
+              </svg> */}
+
+              <img
+                width="40"
+                height="40"
+                className="bd-img card-img-top"
+                src="ABlogo.svg"
+                alt="LOGO"
+              />
+              {/* <strong>Alsdfsdfsdsdfbum</strong> */}
             </a>
             <button
               className="navbar-toggler"
@@ -79,8 +84,57 @@ const CardsHeader = () => {
           </div>
         </div>
       </header>
+      <section className="jumbotron text-center">
+        <div className="container mt-4">
+          <h1>Country : Population</h1>
+          <p className="lead text-muted">
+            This is a awesome application to display in order countries and
+            population.
+            <br /> You can even make it up your own country, you have to type in
+            this format: <b>Country : Population</b> and a flag <b>URL</b>
+          </p>
+          <p>
+            <input
+              id="inputCountry"
+              type="text"
+              placeholder="ABkistan : 1000000"
+              className="my-2 m-1"
+            />
+            <input
+              id="inputFlag"
+              type="text"
+              placeholder="Paste a URL of a flag"
+              className="my-2 m-1"
+            />
+            <br />
+            <button
+              onClick={() => setActive("all")}
+              className="btn btn-primary my-2 m-1 "
+            >
+              Countries by Population
+            </button>
+            <button
+              onClick={() => setActive("top")}
+              className="btn btn-secondary my-2 m-1"
+            >
+              Biggest 10 Countries
+            </button>
+            <button
+              onClick={() => setActive("low")}
+              className="btn btn-secondary my-2 m-1"
+            >
+              Smallest 10 Countries
+            </button>
+          </p>
+        </div>
+      </section>
+      <div>
+        {active === "all" && <CardsAll />}
+        {active === "top" && <CardsTop />}
+        {active === "low" && <CardsLow />}
+      </div>
     </>
   );
 };
 
-export default CardsHeader;
+export default Header;
