@@ -9,91 +9,19 @@ const CardsTop = (props) => {
         <div className="album py-5 bg-light">
           <div className="container">
             <div className="row">
-              {/* ////////////////////////////////////implement single card/////////////////////////////////////////////////////////// */}
+              {/* ////////////////////////////////////implement single card /////////////////////////////////////////////////////////// */}
               <div className="col-md-4">
                 <div className="card mb-4 shadow-sm">
                   <img
                     className="bd-img card-img-top"
                     width="100%"
                     height="225"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAElBMVEX////VKx4AOaYAGJ4AOq3fKgABXnTtAAAA9UlEQVR4nO3QsQGAQAwAoejr/ivb50pbGIEZAAAAAAAAAAAAAAAAAAAAAH47bHOzOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJzUP27xsc7E5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aQ+2jLMGymKnQ8AAAAASUVORK5CYII="
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAB5CAMAAACjkCtXAAAAFVBMVEX///8AI5XtKTl1e7fzfYTtFisADJAUEbSdAAAAeElEQVR4nO3OOQEAIAwEsOP1L7kOGMqaKEhG3135sM/si7a2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tvZTAaLOXCyoPt13AAAAAElFTkSuQmCC"
                     alt="never gonna give you up"
                   />
                   <div className="card-body">
                     <p className="card-text">
                       {" "}
-                      The population number of Brazil, <br />
-                      is 17.5
-                    </p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                          View
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                          Edit
-                        </button>
-                      </div>
-                      <small className="text-muted">9 mins</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
-              {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
-              <div className="col-md-4">
-                <div className="card mb-4 shadow-sm">
-                  <img
-                    className="bd-img card-img-top"
-                    width="100%"
-                    height="225"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAElBMVEX////VKx4AOaYAGJ4AOq3fKgABXnTtAAAA9UlEQVR4nO3QsQGAQAwAoejr/ivb50pbGIEZAAAAAAAAAAAAAAAAAAAAAH47bHOzOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJzUP27xsc7E5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aQ+2jLMGymKnQ8AAAAASUVORK5CYII="
-                    alt="never gonna give you up"
-                  />
-                  <div className="card-body">
-                    <p className="card-text">
-                      The population number of Brazil, <br />
-                      is 17.5
-                    </p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                          View
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                          Edit
-                        </button>
-                      </div>
-                      <small className="text-muted">9 mins</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
-              {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
-              <div className="col-md-4">
-                <div className="card mb-4 shadow-sm">
-                  <img
-                    className="bd-img card-img-top"
-                    width="100%"
-                    height="225"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAElBMVEX////VKx4AOaYAGJ4AOq3fKgABXnTtAAAA9UlEQVR4nO3QsQGAQAwAoejr/ivb50pbGIEZAAAAAAAAAAAAAAAAAAAAAH47bHOzOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJzUP27xsc7E5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aQ+2jLMGymKnQ8AAAAASUVORK5CYII="
-                    alt="never gonna give you up"
-                  />
-                  <div className="card-body">
-                    <p className="card-text">
                       The population number of Brazil, <br />
                       is 17.5
                     </p>
@@ -125,5 +53,4 @@ const CardsTop = (props) => {
     </div>
   );
 };
-
 export default CardsTop;

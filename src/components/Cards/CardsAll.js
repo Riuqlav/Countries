@@ -11,7 +11,7 @@ const CardsAll = (props) => {
         <div className="album py-5 bg-light">
           <div className="container">
             <div className="row">
-              {/* ////////////////////////////////////implement single card/////////////////////////////////////////////////////////// */}
+              {/* ////////////////////////////////////implement single card /////////////////////////////////////////////////////////// */}
               <div className="col-md-4">
                 <div className="card mb-4 shadow-sm">
                   <img
@@ -24,78 +24,6 @@ const CardsAll = (props) => {
                   <div className="card-body">
                     <p className="card-text">
                       {" "}
-                      The population number of Brazil, <br />
-                      is 17.5
-                    </p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                          View
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                          Edit
-                        </button>
-                      </div>
-                      <small className="text-muted">9 mins</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
-              {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
-              <div className="col-md-4">
-                <div className="card mb-4 shadow-sm">
-                  <img
-                    className="bd-img card-img-top"
-                    width="100%"
-                    height="225"
-                    src="https://media.istockphoto.com/vectors/vector-flag-of-brazil-proportion-710-brazilian-national-flag-vector-id967321044?s=612x612"
-                    alt="never gonna give you up"
-                  />
-                  <div className="card-body">
-                    <p className="card-text">
-                      The population number of Brazil, <br />
-                      is 17.5
-                    </p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                          View
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                          Edit
-                        </button>
-                      </div>
-                      <small className="text-muted">9 mins</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
-              {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
-              <div className="col-md-4">
-                <div className="card mb-4 shadow-sm">
-                  <img
-                    className="bd-img card-img-top"
-                    width="100%"
-                    height="225"
-                    src="https://media.istockphoto.com/vectors/vector-flag-of-brazil-proportion-710-brazilian-national-flag-vector-id967321044?s=612x612"
-                    alt="never gonna give you up"
-                  />
-                  <div className="card-body">
-                    <p className="card-text">
                       The population number of Brazil, <br />
                       is 17.5
                     </p>
