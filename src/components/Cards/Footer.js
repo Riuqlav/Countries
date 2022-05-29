@@ -4,6 +4,14 @@ const Footer = () => {
   return (
     <>
       {" "}
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <footer className="text-muted">
         <div className="container">
           <p className="float-right">
