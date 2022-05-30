@@ -25,19 +25,7 @@ const Header = () => {
                 src="ABlogo.svg"
                 alt="LOGO"
               />
-              {/* <strong>Alsdfsdfsdsdfbum</strong> */}
             </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarHeader"
-              aria-controls="navbarHeader"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
           </div>
         </div>
       </header>
@@ -51,18 +39,23 @@ const Header = () => {
             this format: <b>Country : Population</b> and a flag <b>URL</b>
           </p>
           <p>
+            {/* Ideally the form should be in utils folder but since the code is not that big I put it here. */}
             <Formik
               initialValues={{ country: "", population: "" }}
               onSubmit={async (values) => {
                 await new Promise((resolve) => setTimeout(resolve, 500));
+                //push the new country to the array apiCountries
                 apiCountries.push(values);
                 console.table(apiCountries);
               }}
             >
               <Form>
-                <Field name="country" type="text" />
-                <Field name="population" type="number" />
-                <button type="submit">Submit</button>
+                <Field class="m-1" name="country" type="text" />
+                <Field class="m-1" name="population" type="number" />
+
+                <button class="btn btn-primary btn-sm mb-1" type="submit">
+                  Add
+                </button>
               </Form>
             </Formik>
 
@@ -88,6 +81,7 @@ const Header = () => {
           </p>
         </div>
       </section>
+      {/* //display the cards conditionally */}
       <div>
         {active === "all" && <CardsAll />}
         {active === "top" && <CardsTop />}
