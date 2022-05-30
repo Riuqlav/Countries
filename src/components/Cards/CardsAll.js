@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../App";
 import "./cards-style.css";
-import Api from "../../utils/Api";
 
 //I know I should make a "Cards" component to serve all the cards, but it is working fine without it.
 //So I'll leave it as is for now maybe I come back on it end of the project.
 
 const CardsAll = () => {
+  const apiCountries = useContext(GlobalContext);
+
   return (
     <>
+      {/* display one h1 tag with the sum of all the countries population */}
+
       <h1>
-        All Countries :{" "}
-        {Api().reduce(() => (
-          <h1> {Api().population} </h1>
-        ))}{" "}
+        The sum of all the countries population is:{" "}
+        {apiCountries.reduce(
+          (accumulator, currentValue) => accumulator + currentValue.population,
+          0
+        )}
       </h1>
-      {/* make it dynamic */}
 
       <div className="container ">
         <main role="main">
@@ -22,6 +26,8 @@ const CardsAll = () => {
             <div className="container">
               <div className="row">
                 {/* ////////////////////////////////////implement single card /////////////////////////////////////////////////////////// */}
+                {/* display one h1 tag with the sum of all the countries population */}
+
                 <div className="col-md-4">
                   <div className="card mb-4 shadow-sm">
                     <div className="card-body">
