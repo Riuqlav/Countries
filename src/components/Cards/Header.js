@@ -11,7 +11,6 @@ const Header = () => {
   const apiCountries = useContext(GlobalContext);
 
   const [active, setActive] = useState("");
-  const [countries, setcountries] = useState([]);
 
   return (
     <>
@@ -56,13 +55,14 @@ const Header = () => {
               initialValues={{ country: "", population: "" }}
               onSubmit={async (values) => {
                 await new Promise((resolve) => setTimeout(resolve, 500));
-                console.log(JSON.stringify(values, null, 2));
+                apiCountries.push(values);
+                console.table(apiCountries);
               }}
             >
               <Form>
                 <Field name="country" type="text" />
                 <Field name="population" type="number" />
-                <button type="submit">Add</button>
+                <button type="submit">Submit</button>
               </Form>
             </Formik>
 
