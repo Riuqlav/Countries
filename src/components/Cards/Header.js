@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../../App";
 import CardsAll from "./CardsAll";
 import CardsTop from "./CardsTop";
 import CardsLow from "./CardsLow";
 
 const Header = () => {
   const [active, setActive] = useState("");
+  const apiCountries = useContext(GlobalContext);
+
   return (
     <>
       <header>

@@ -16,9 +16,9 @@ const Api = () => {
       });
   }, []);
   // I found that removing the ones with 0 ppl with filter(), then sort() before slice() was the best option
-  const countriesPopulation = pllNumber.filter((x) => x.population > 0);
+  const countriesPopulation = () => pllNumber.filter((x) => x.population > 0);
 
-  return countriesPopulation;
+  return countriesPopulation();
 };
 
 export default Api;

@@ -9,7 +9,7 @@ export const GlobalContext = React.createContext();
 
 function App() {
   return (
-    <GlobalContext.Provider value={Api}>
+    <GlobalContext.Provider value={Api()}>
       <div className="App">
         <Header />
         <Footer />
