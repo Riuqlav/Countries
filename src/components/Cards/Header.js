@@ -45,7 +45,7 @@ const Header = () => {
               initialValues={{ country: "", population: "" }}
               onSubmit={async (values) => {
                 await new Promise((resolve) => setTimeout(resolve, 500));
-                //push the new country to the array apiCountries
+                //unshift instead push to show on top the new country to the array apiCountries
                 apiCountries.unshift(values);
                 console.table(apiCountries);
               }}

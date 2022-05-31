@@ -1,9 +1,13 @@
-// useState when I need to change the state of a component in this I don't need yet, save for the input
-import Api from "./Api";
+import React, { useContext } from "react";
+import { GlobalContext } from "../App";
+
+//I know I should make a "Cards" component to serve all the cards, but it is working fine without it.
+//So I'll leave it as is for now maybe I come back on it end of the project.
 
 const CountriesObjLow = () => {
+  const apiCountries = useContext(GlobalContext);
   //get the top 10 countries with the lowest population
-  const low10Countries = Api()
+  const low10Countries = apiCountries
     .sort((a, b) => a.population - b.population)
     .slice(0, 10);
 
