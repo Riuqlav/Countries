@@ -52,11 +52,12 @@ const Header = () => {
             >
               <Form>
                 <Field class="m-1" name="country" type="text" />
-                <Field class="m-1" name="population" type="number" />
+                <Field class="m-1 " name="population" type="number" />
 
                 <button
                   onClick={() => setActive("all")}
-                  className="btn btn-primary my-2 m-1 "
+                  //small button blue
+                  className="btn btn-sm btn-primary mb-1 ml-0"
                 >
                   Add
                 </button>

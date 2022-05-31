@@ -12,7 +12,7 @@ const CountriesObjTop = () => {
     .slice(0, 10)
     .reverse(); //reverse to get the top 10 in the same order as the low10Countries
 
-  return top10Countries.reverse();
+  return top10Countries;
 };
 
 export default CountriesObjTop;
