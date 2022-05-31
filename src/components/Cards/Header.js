@@ -33,10 +33,11 @@ const Header = () => {
         <div className="container mt-4">
           <h1>Country : Population</h1>
           <p className="lead text-muted">
-            This is a awesome application to display in order countries and
-            population.
-            <br /> You can even make it up your own country, if your country
-            exists, you can even get a flag of it. <br />
+            This is a awesome application to display Countries and Population
+            (sometimes a flag).
+            <br /> You can type a country or make it up your own! <br />{" "}
+            <strong> Bonus</strong>: If your country exists, you can even get
+            the flag of it. <br />
             Try it out!
           </p>
           <p>
@@ -51,13 +52,22 @@ const Header = () => {
               }}
             >
               <Form>
-                <Field class="m-1" name="country" type="text" />
-                <Field class="m-1 " name="population" type="number" />
+                <Field
+                  placeholder="Country"
+                  class="m-1"
+                  name="country"
+                  type="text"
+                />
+                <Field
+                  placeholder="Population"
+                  class="m-1 "
+                  name="population"
+                  type="number"
+                />
 
                 <button
-                  onClick={() => setActive("all")}
-                  //small button blue
                   className="btn btn-sm btn-primary mb-1 ml-0"
+                  type="submit"
                 >
                   Add
                 </button>
