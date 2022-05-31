@@ -35,8 +35,9 @@ const Header = () => {
           <p className="lead text-muted">
             This is a awesome application to display in order countries and
             population.
-            <br /> You can even make it up your own country, you have to type in
-            this format: <b>Country : Population</b> and a flag <b>URL</b>
+            <br /> You can even make it up your own country, if your country
+            exists, you can even get a flag of it. <br />
+            Try it out!
           </p>
           <p>
             {/* Ideally the form should be in utils folder but since the code is not that big I put it here. */}
@@ -45,7 +46,7 @@ const Header = () => {
               onSubmit={async (values) => {
                 await new Promise((resolve) => setTimeout(resolve, 500));
                 //push the new country to the array apiCountries
-                apiCountries.push(values);
+                apiCountries.unshift(values);
                 console.table(apiCountries);
               }}
             >
@@ -53,7 +54,10 @@ const Header = () => {
                 <Field class="m-1" name="country" type="text" />
                 <Field class="m-1" name="population" type="number" />
 
-                <button class="btn btn-primary btn-sm mb-1" type="submit">
+                <button
+                  onClick={() => setActive("all")}
+                  className="btn btn-primary my-2 m-1 "
+                >
                   Add
                 </button>
               </Form>
@@ -82,6 +86,7 @@ const Header = () => {
         </div>
       </section>
       {/* //display the cards conditionally */}
+
       <div>
         {active === "all" && <CardsAll />}
         {active === "top" && <CardsTop />}
