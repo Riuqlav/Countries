@@ -21,11 +21,15 @@ Displays responsively `BOTTOM countries` (population-wise), filtering the ones w
 ## How to Use
 
 The way to use the application is very simple,
+
 In the `input fields` you can type a real or pretended country and population, they will automatically show up in the list and will be assign a flag.
+
 Since it can accept any countries, on any of the 3 sections, the list can get very big, so `Ctrl+F` the name of the country you'd like to know the population/flag of and you will find it!
 
 ### `Last notes`
 
 This Challenge was very fun, and I took liberty to change some things to improve the UI/UX.
+
 There are several little things I'd like to improve that go much beyond the assignment.
+
 I might be re-visiting it and adding more features.
