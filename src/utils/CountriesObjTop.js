@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../App";
 
-//I know I should make a "Cards" component to serve all the cards, but the project asked to store an obj, but it is working fine without it.
-//So I'll leave it as is for now maybe I come back on it end of the project.
-
 const CountriesObjTop = () => {
   // const apiCountries = useContext(GlobalContext);
   const { apiCountries, setApiCountries } = useContext(GlobalContext);

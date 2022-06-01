@@ -24,7 +24,7 @@ The way to use the application is very simple,
 
 In the `input fields`, you can type a real or pretended country and population, they will automatically show up in the list and will be assigned a flag.
 
-Since it can accept any country, on any of the 3 sections, the list can get very big, so `Ctrl+F` the name of the country you'd like to know the population/flag of, and you will find it!
+Since it can accept any country, on any of the 3 sections, the list can get very big and they are in order of population, so `Ctrl+F` the name of the country you'd like to know the population/flag of, and you will find it!
 
 ### `Last notes`
 

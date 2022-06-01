@@ -2,7 +2,6 @@ import "./App.css";
 import Api from "./utils/Api";
 import React from "react";
 import Header from "./components/Cards/Header";
-// import CardsAll from "./components/Cards/CardsAll";
 import Footer from "./components/Cards/Footer";
 
 export const GlobalContext = React.createContext();
