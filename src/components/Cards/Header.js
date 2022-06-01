@@ -30,13 +30,13 @@ const Header = () => {
       </header>
       <section className="jumbotron text-center">
         <div className="container mt-4">
-          <h1>Country : Population</h1>
+          <h1>Country : Population : Flag</h1>
           <p className="lead text-muted">
             This is a awesome application to display Countries and Population
             (sometimes a flag).
-            <br /> You can type a country or make it up your own! <br />{" "}
-            <strong>Bonus</strong>: If your country exists, you can even get the
-            flag of it.
+            <br /> You can type a country or invent your own, and it will be
+            added in order to the list! <br /> <strong>Bonus</strong>: If your
+            country exists, you can even get the flag of it.
             <br />
             Try it out!
           </p>
