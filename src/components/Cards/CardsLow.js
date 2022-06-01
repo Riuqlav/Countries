@@ -1,7 +1,6 @@
 import CountriesObjLow from "../../utils/CountriesObjLow";
 import "./cards-style.css";
 
-//I could make it collapsable with one button, but I don't think it would make sense in the UI.
 const CardsLow = () => {
   const apiCountries = CountriesObjLow();
 

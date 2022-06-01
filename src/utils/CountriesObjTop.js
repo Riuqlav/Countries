@@ -5,7 +5,9 @@ import { GlobalContext } from "../App";
 //So I'll leave it as is for now maybe I come back on it end of the project.
 
 const CountriesObjTop = () => {
-  const apiCountries = useContext(GlobalContext);
+  // const apiCountries = useContext(GlobalContext);
+  const { apiCountries, setApiCountries } = useContext(GlobalContext);
+
   //get the top 10 countries with the highest population
   const top10Countries = apiCountries
     .sort((a, b) => b.population - a.population)

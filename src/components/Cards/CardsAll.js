@@ -3,17 +3,16 @@ import { GlobalContext } from "../../App";
 import "./cards-style.css";
 
 //I know I should make a "Cards" component to serve all the cards, but it is working fine without it.
-//So I'll leave it as is for now maybe I come back on it end of the project.
 
 const CardsAll = () => {
-  const apiCountries = useContext(GlobalContext);
+  const { apiCountries, setApiCountries } = useContext(GlobalContext);
 
   return (
     <>
       {/* display one h1 tag with the sum of all the countries population */}
 
       <h1>
-        The sum of all the countries population is:{" "}
+        The sum of the planet's population is:{" "}
         {apiCountries.reduce(
           (accumulator, currentValue) => accumulator + currentValue.population,
           0
@@ -21,13 +20,12 @@ const CardsAll = () => {
       </h1>
 
       <div className="container ">
+        {/* //////////////////////////////////////////////////////////////////////////////////////// */}
+        {/* display one Card containing each country's name and population in the array */}
         <main role="main">
           <div className="album py-5 bg-light">
             <div className="container">
               <div className="row">
-                {/* //////////////////////////////////////////////////////////////////////////////////////// */}
-                {/* display one Card containing each country's name and population in the array */}
-
                 {apiCountries.map((countries) => (
                   <div className="col-md-4">
                     <div className="card mb-4 shadow-sm">
@@ -58,11 +56,11 @@ const CardsAll = () => {
                     </div>
                   </div>
                 ))}
-                {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
               </div>
             </div>
           </div>
         </main>
+        {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
       </div>
     </>
   );

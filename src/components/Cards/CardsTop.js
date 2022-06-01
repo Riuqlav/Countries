@@ -15,7 +15,6 @@ const CardsTop = () => {
           0
         )}
       </h1>
-      {/* make it dynamic */}
       <div className="container ">
         <main role="main">
           <div className="album py-5 bg-light">

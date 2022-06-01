@@ -1,15 +1,14 @@
-import { Formik, Field, Form } from "formik";
 import CardsAll from "./CardsAll";
 import CardsTop from "./CardsTop";
 import CardsLow from "./CardsLow";
 import { GlobalContext } from "../../App";
 import { useState, useContext } from "react";
-
-//set up the sandwich of global context in here for the cards with apiCountries instead of app.js
+import { Formik, Field, Form } from "formik";
 
 const Header = () => {
-  const apiCountries = useContext(GlobalContext);
-
+  // GlobalContext coming from App.js, with the array from the API
+  const { apiCountries, setApiCountries } = useContext(GlobalContext);
+  // Activate cards conditionally (this would've been better with pages)
   const [active, setActive] = useState("");
 
   return (
@@ -36,19 +35,23 @@ const Header = () => {
             This is a awesome application to display Countries and Population
             (sometimes a flag).
             <br /> You can type a country or make it up your own! <br />{" "}
-            <strong> Bonus</strong>: If your country exists, you can even get
-            the flag of it. <br />
+            <strong>Bonus</strong>: If your country exists, you can even get the
+            flag of it.
+            <br />
             Try it out!
           </p>
           <p>
-            {/* Ideally the form should be in utils folder but since the code is not that big I put it here. */}
+            {/* Ideally the form should be in utils folder but since the file is not that big I put it here. */}
             <Formik
               initialValues={{ country: "", population: "" }}
               onSubmit={async (values) => {
                 await new Promise((resolve) => setTimeout(resolve, 500));
-                //unshift instead push to show on top the new country to the array apiCountries
-                apiCountries.unshift(values);
-                console.table(apiCountries);
+                setApiCountries(
+                  [values, ...apiCountries].sort(
+                    (a, b) => b.population - a.population
+                  )
+                );
+                setActive("all");
               }}
             >
               <Form>
@@ -75,6 +78,8 @@ const Header = () => {
             </Formik>
 
             <br />
+
+            {/* //display the cards conditionally */}
             <button
               onClick={() => setActive("all")}
               className="btn btn-primary my-2 m-1 "

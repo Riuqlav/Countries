@@ -6,6 +6,7 @@ import Header from "./components/Cards/Header";
 import Footer from "./components/Cards/Footer";
 
 export const GlobalContext = React.createContext();
+//set up the sandwich of global context in here
 
 function App() {
   return (
