@@ -6,6 +6,8 @@ It is divided into 3 main visual elements, All countries, Top countries, and Bot
 
 The 3 main visual elements can assign a flag from input countries fetching from an external API.
 
+`DEMO`: https://riuqlav.github.io/Countries/
+
 ## All countries
 
 Displays responsively `All countries` and Sum of the population at the top.
