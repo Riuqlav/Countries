@@ -8,7 +8,7 @@ The 3 main visual elements can assign a flag from input countries fetching from 
 
 `DEMO`: https://riuqlav.github.io/Countries/
 
-## All countries
+## ALL countries
 
 Displays responsively `All countries` and Sum of the population at the top.
 
