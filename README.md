@@ -12,7 +12,7 @@ The 3 main visual elements can assign a flag from input countries fetching from 
 
 Displays responsively `All countries` and Sum of the population at the top.
 
-## TOP-countries
+## TOP countries
 
 Displays responsively `TOP countries` (population-wise) and the Sum of the population at the top.
 
