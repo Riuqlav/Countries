@@ -24,7 +24,7 @@ const Footer = () => {
               Source code for this project.
             </a>{" "}
             Don't forget the sunscreen and to check out my{" "}
-            <a href="https://riuqlav.github.io/Portifolio-H/">Portfolio!</a>
+            <a href="https://riuqlav.github.io/PersonalWebsite/">Portfolio!</a>
           </p>
         </div>
       </footer>
